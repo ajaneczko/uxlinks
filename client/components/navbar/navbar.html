@@ -1,0 +1,56 @@
+
+<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
+
+  <script type="text/ng-template" id="myModalContent.html">
+    <form class="form" name="form" ng-submit="addThing()" novalidate="">
+      <div class="modal-header">
+        <h3 class="modal-title">Share a link with others!</h3>
+      </div>
+      <div class="modal-body">
+        <ul>
+
+          <div class="form-group">
+            <label>Title</label>
+            <input name="title" class="form-control" ng-model="title" mongoose-error="">
+            <label>Link</label>
+            <input name="link" class="form-control" ng-model="link" mongoose-error="">
+          </div>
+
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok();reloadPage()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+      </div>
+    </form>
+  </script>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">uxlinks </a>
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+            <a ng-href="{{item.link}}">{{item.title}}</a>
+        </li>
+        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li id="submit-link" ng-class="{active: isActive('/signup')}"><a href="" ng-click="open()">Submit link</a></li>
+        <!--
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
+        <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li> <!-->
+      </ul>
+    </div>
+  </div>
+</div>

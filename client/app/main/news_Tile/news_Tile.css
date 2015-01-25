@@ -1,0 +1,11 @@
+.news-body {
+  border:#4393B9 solid 1px;
+  text-align:center;
+  padding:10px;
+  border-radius:10px;
+}
+
+.news-body a {
+  text-decoration:none;
+
+}

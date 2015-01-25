@@ -1,0 +1,31 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Daily dose of carefully curated <strong>uxlinks</strong>. Enjoy it!</p>
+    <img src="assets/images/gentleman_large.png" alt="I'm Yeoman">
+  </div>
+</header>
+
+
+<div class="container" id="news-wrapper">
+  <div class="row" >
+    <div class="col-lg-12">
+      <h1 class="page-header centred"><i class="fa fa-link"></i></h1>
+        <div ng-repeat="thing in awesomeThings.slice().reverse()">
+
+          <news-tile news="thing" thing="thing" index="{{$index}}" ></news-tile>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>uxlinks </i> |
+        <a href="https://twitter.com/tyhenkel">@uxlinks</a> |
+         <a href="http://schibsted.pl/">Powered by STP with <i class="fa fa-heart" id="pulse"></i> </a></p>
+  </div>
+</footer>
