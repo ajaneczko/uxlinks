@@ -14,9 +14,7 @@
     <div class="col-lg-12">
       <h1 class="page-header centred"><i class="fa fa-link"></i></h1>
         <div ng-repeat="thing in awesomeThings.slice().reverse()">
-
-          <news-tile news="thing" thing="thing" index="{{$index}}" ></news-tile>
-
+          <news-tile news="thing" thing="thing" index="{{$index + 1}}" ></news-tile>
         </div>
     </div>
   </div>

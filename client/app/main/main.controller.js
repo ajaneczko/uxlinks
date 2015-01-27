@@ -8,7 +8,10 @@ angular.module('uxlinksApp')
       $scope.awesomeThings = awesomeThings;
       socket.syncUpdates('thing', $scope.awesomeThings);
     });
-
+        $scope.reverse = function(array) {
+                var copy = [].concat(array);
+                return copy.reverse();
+            }
     $scope.addThing = function() {
       if($scope.newThing === '') {
         return;
