@@ -3,8 +3,6 @@
 angular.module('uxlinksApp')
 .controller('NavbarCtrl', function ($scope, $location, $modal, Auth, $http) {
 
-
-
    $scope.items = ['item1', 'item2', 'item3'];
       $scope.open = function (size) {
 

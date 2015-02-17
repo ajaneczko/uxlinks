@@ -2,16 +2,15 @@
 
 <header class="hero-unit" id="banner">
   <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Daily dose of carefully curated <strong>uxlinks</strong>. Enjoy it!</p>
     <img src="assets/images/gentleman_large.png" alt="I'm Yeoman">
+    <p class="lead">Daily dose of carefully curated <strong>uxlinks</strong>. Enjoy it!</p>
   </div>
 </header>
 
 
 <div class="container" id="news-wrapper">
-  <div class="row" >
-    <div class="col-lg-12">
+  <div class="row-fluid" >
+    <div class="span4">
       <h1 class="page-header centred"><i class="fa fa-link"></i></h1>
         <div ng-repeat="thing in awesomeThings.slice().reverse()">
           <news-tile news="thing" thing="thing" index="{{$index + 1}}" ></news-tile>
@@ -22,8 +21,8 @@
 
 <footer class="footer">
   <div class="container">
-      <p>uxlinks </i> |
+      <p>uxlinks</i> |
         <a href="https://twitter.com/uxlinks">@uxlinks</a> |
-         <a href="https://github.com/ajaneczko/uxlinks">Powered by STP with <i class="fa fa-heart" id="pulse"></i> </a></p>
+         <a href="https://github.com/ajaneczko/uxlinks"><i class="fa fa-heart" id="pulse"></i> </a></p>
   </div>
 </footer>
